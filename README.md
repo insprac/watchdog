@@ -33,6 +33,12 @@ Watchdog's source code is organized into different packages and files, each with
 - `watchdog/state`: Manages the state of the system and keeps track of previous values.
 - `watchdog/utils`: Contains utility functions used across the system.
 
+## Environment Configuration
+
+Before running the Watchdog application, you must set the `WATCHDOG_DIR` environment variable. This variable specifies the directory where Watchdog will look for the configuration file.
+
+The configuration file should be named config.yaml and must be located in the directory specified by the `WATCHDOG_DIR` environment variable.
+
 ## Usage
 
 To start using Watchdog, clone the repository and configure the `config.yaml` file according to your needs:
