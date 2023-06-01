@@ -66,6 +66,49 @@ alerts:
       amount: threshold_amount
 ```
 
+Example:
+
+```yaml
+discordWebhookUrl: https://discord.com/api/webhooks/...
+
+coins:
+- name: ethereum # the CoinGecko token ID
+  displayName: ETH
+- name: magic
+  displayName: MAGIC
+- name: sui
+  displayName: SUI
+
+silos:
+- name: magic
+  address: 0x30c4aa967f68705ab5677ebe17b3affd0c59e71c
+  displayName: Magic
+  tokens:
+  - name: magic
+    displayName: MAGIC # this name must match the silo's name displayed in their app for scraping purposes
+  - name: eth
+    displayName: Ether
+  - name: USDC
+    displayName: USD Coin (Arb1)
+
+alerts:
+  movement:
+  - name: coins.ethereum
+    change: 1%
+  - name: coins.magic
+    change: 5%
+  - name: coins.sui
+    change: 0.01
+  - name: silos.magic.magic.totalDeposited
+    change: 10K
+  - name: silos.magic.magic.utilization
+    change: 5%
+
+  threshold:
+  - name: silos.magic.magic.availableToBorrow
+    amount: 200K
+```
+
 Once the configuration is set, run the application using the Go command:
 
 ```bash
