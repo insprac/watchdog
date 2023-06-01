@@ -45,25 +45,26 @@ To start using Watchdog, clone the repository and configure the `config.yaml` fi
 
 ```yaml
 discordWebhookUrl: YOUR_DISCORD_WEBHOOK_URL
+
 coins:
-  - name: coin_name
+  - name: COINGECKO_TOKEN_NAME
     displayName: COIN_DISPLAY_NAME
 
 silos:
-  - name: silo_name
-    address: silo_address
+  - name: SILO_NAME
+    address: SILO_ADDRESS
     displayName: SILO_DISPLAY_NAME
     tokens:
-      - name: token_name
+      - name: TOKEN_NAME
         displayName: TOKEN_DISPLAY_NAME
 
 alerts:
   movement:
-    - name: entity_name
-      change: change_percentage
+    - name: ENTITY_NAME
+      change: CHANGE_PERCENTAGE
   threshold:
-    - name: entity_name
-      amount: threshold_amount
+    - name: ENTITY_NAME
+      amount: THRESHOLD_AMOUNT
 ```
 
 Example:
